@@ -1,24 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Route, Routes} from 'react-router-dom';
+import LoginPage from './components/LoginPage';
+import HomePage from './components/HomePage';
+import AboutUs from './components/AboutUs';
+import Test from './components/Test';
+import LipsDetailPage from './components/LipsDetailPage';
+import FaceDetailPage from './components/FaceDetailPage';
+import CheeksDetailPage from './components/CheeksDetailPage';
+import EyesDetailPage from './components/EyesDetailPage';
+import RegisterPage from './components/RegisterPage';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+    <Routes>
+      <Route path='/' exact element={<RegisterPage />}/>
+      <Route path='/Login' element={<LoginPage />}/>
+      <Route path='/Home' element={<HomePage />} />
+      <Route path='/About/Us' element={<AboutUs />} />
+      <Route path='/Lips/Detail' element={<LipsDetailPage />} />
+      <Route path='/Face/Detail' element={<FaceDetailPage />} />
+      <Route path='/Cheeks/Detail' element={<CheeksDetailPage />} />
+      <Route path='/Eyes/Detail' element={<EyesDetailPage />} />
+      <Route path='/Test' element={<Test />} />
+    </Routes>
+    </BrowserRouter>
   );
 }
 
