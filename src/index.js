@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import { ApolloProvider } from '@apollo/client';
 import client from './api/apollo-client';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

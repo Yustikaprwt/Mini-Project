@@ -92,8 +92,8 @@ function LoginPage() {
         <p
         style={{color: "#F47181", display:"flex", justifyContent: "center"}}>Don't Have Any Account?
         </p>
-    <p onClick={SignUp}
-    style={{color: "#889390", display:"flex", justifyContent: "center"}}><strong>Create An Account</strong></p>
+    <a href="" onClick={SignUp}
+    style={{color: "#889390", display:"flex", justifyContent: "center"}}><strong>Create An Account</strong></a>
         </div>
    </div>
 </>

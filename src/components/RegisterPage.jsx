@@ -182,8 +182,8 @@ function RegisterPage() {
             </form>
         <p
         style={{color: "#F47181", display:"flex", justifyContent: "center"}}>Already have an Account?</p>
-    <p onClick={action}
-    style={{color: "#889390", display:"flex", justifyContent: "center", marginTop: 0}}><strong>Sign In</strong></p>
+    <a href="" onClick={action}
+    style={{color: "#889390", display:"flex", justifyContent: "center", marginTop: 0}}><strong>Sign In</strong></a>
 </div>
 </div>
 </>

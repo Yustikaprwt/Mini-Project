@@ -20,9 +20,10 @@
     justify-content: center;
 }
 
-Button :hover {
-    color: aqua;
+a :hover {
+    color:#F47181;
 }
+
 
 
 

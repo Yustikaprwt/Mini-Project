@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes} from 'react-router-dom';
 import LoginPage from './components/LoginPage';
 import HomePage from './components/HomePage';
 import AboutUs from './components/AboutUs';
-import Test from './components/Test';
+import DetailProduct from './components/LipsDetailProduct';
 import LipsDetailPage from './components/LipsDetailPage';
 import FaceDetailPage from './components/FaceDetailPage';
 import CheeksDetailPage from './components/CheeksDetailPage';
@@ -22,7 +22,7 @@ function App() {
       <Route path='/Face/Detail' element={<FaceDetailPage />} />
       <Route path='/Cheeks/Detail' element={<CheeksDetailPage />} />
       <Route path='/Eyes/Detail' element={<EyesDetailPage />} />
-      <Route path='/Test' element={<Test />} />
+      <Route path='/Detail/:id' exact element={<DetailProduct />} />
     </Routes>
     </BrowserRouter>
   );
