@@ -33,6 +33,11 @@
     align-content: center;
 }
 
+.card-image :hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
 .card-body {
     font-size: 25px;
     color: #F47181;

@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes} from 'react-router-dom';
+import {Route, Routes} from 'react-router-dom';
 import LoginPage from './page/LoginPage';
 import HomePage from './page/HomePage';
 import AboutUs from './page/AboutUs';
@@ -7,7 +7,7 @@ import LipsDetailProduct from './detailpage/LipsDetailProduct';
 import FaceDetailProduct from './detailpage/FaceDetailProduct';
 import CheckDetailProduct from './detailpage/CheeksDetailProduct';
 import EyesDetailProduct from './detailpage/EyesDetailProduct';
-import Wishlist from './components/Wishlist';
+import Wishlist from './page/Wishlist';
 
 import LipsDetailPage from './page/LipsDetailPage';
 import FaceDetailPage from './page/FaceDetailPage';
@@ -15,9 +15,9 @@ import CheeksDetailPage from './page/CheeksDetailPage';
 import EyesDetailPage from './page/EyesDetailPage';
 
 function App() {
+
   return (
     <>
-    <BrowserRouter>
     <Routes>
       <Route path='/' element={<LoginPage />}/>
       <Route path='/Home' element={<HomePage />} />
@@ -32,7 +32,6 @@ function App() {
       <Route path='Detail/Eyes/Product/:id' exact element={<EyesDetailProduct />} />
       <Route path='/Wishlist' exact element={<Wishlist />} />
     </Routes>
-    </BrowserRouter>
     </>
   );
 }

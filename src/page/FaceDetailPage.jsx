@@ -2,8 +2,7 @@ import { React, useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Loading from "../components/Loading";
-import SearchBar from "../components/Searchbar";
-import { useNavigate, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const FaceDetailPage = () => {
 
@@ -40,18 +39,39 @@ const FaceDetailPage = () => {
         const ShowProducts = () => {
             return ( 
                 <>
-                <div className="button d-flex justify-content-center mb-5 pb-5">
-                    <button onClick={() => setFilter(data)} className="btn btn-outline-secondary btn-sm">All</button>
-                    <button onClick={() => filterProduct("colourpop")} className="btn btn-outline-secondary btn-sm">colourpop</button>
-                    <button onClick={() => filterProduct("glossier")} className="btn btn-outline-secondary btn-sm">glossier</button>
-                    <button onClick={() => filterProduct("nyx")} className="btn btn-outline-secondary btn-sm">nyx</button>
-                    <button onClick={() => filterProduct("clinique")} className="btn btn-outline-secondary btn-sm">clinique</button>
-                    <button onClick={() => filterProduct("dior")} className="btn btn-outline-secondary btn-sm">dior</button>
-                    <button onClick={() => filterProduct("l'oreal")} className="btn btn-outline-secondary btn-sm">l'oreal</button>
-                    <button onClick={() => filterProduct("iman")} className="btn btn-outline-secondary btn-sm">iman</button>
-                    <button onClick={() => filterProduct("revlon")} className="btn btn-outline-secondary btn-sm">revlon</button>
-                    <button onClick={() => filterProduct("maybelline")} className="btn btn-outline-secondary btn-sm">maybelline</button>
+                <div className="button d-flex justify-content-center p-2" style={{marginTop: "70px"}}>
+                    <button onClick={() => 
+                        setFilter(data)} className="btn btn-outline-secondary btn-sm">All
+                    </button>
+                    <button onClick={() => 
+                        filterProduct("colourpop")} className="btn btn-outline-secondary btn-sm">colourpop
+                    </button>
+                    <button onClick={() => 
+                        filterProduct("glossier")} className="btn btn-outline-secondary btn-sm">glossier
+                    </button>
+                    <button onClick={() => 
+                        filterProduct("nyx")} className="btn btn-outline-secondary btn-sm">nyx
+                    </button>
+                    <button onClick={() => 
+                        filterProduct("clinique")} className="btn btn-outline-secondary btn-sm">clinique
+                    </button>
+                    <button onClick={() => 
+                        filterProduct("dior")} className="btn btn-outline-secondary btn-sm">dior
+                    </button>
+                    <button onClick={() => 
+                        filterProduct("l'oreal")} className="btn btn-outline-secondary btn-sm">l'oreal
+                    </button>
+                    <button onClick={() => 
+                        filterProduct("iman")} className="btn btn-outline-secondary btn-sm">iman
+                    </button>
+                    <button onClick={() => 
+                        filterProduct("revlon")} className="btn btn-outline-secondary btn-sm">revlon
+                    </button>
+                    <button onClick={() => 
+                        filterProduct("maybelline")} className="btn btn-outline-secondary btn-sm">maybelline
+                    </button>
                 </div>
+            <hr/>
 
                 <div className="row" style={{display: "flex", flexDirection: "row"}}>
                         {filter.map((product) => (
@@ -65,7 +85,6 @@ const FaceDetailPage = () => {
                                             <h4 className="card-text" style={{color: "#5A5D60"}}>{product.name}</h4>
                                             <p>${product.price}</p>
                                             <NavLink to={`/Detail/Face/Product/${product.id}`} className="btn btn-primary" style={{marginBottom: "20px"}}>Check Detail</NavLink>
-                                            <a href="#" className="btn btn-danger" style={{marginBottom: "20px"}}>Delete Product</a>
                                         </div>
                                     </div>
                                 </div>
@@ -79,9 +98,6 @@ const FaceDetailPage = () => {
     return (
         <>
        <Navbar/>
-            <SearchBar/>
-                    <hr/>
-
                 <div className="loading">
                     {loading ? <Loading/> : <ShowProducts/>}
                 </div>

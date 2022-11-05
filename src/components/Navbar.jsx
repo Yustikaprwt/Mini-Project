@@ -2,12 +2,13 @@ import React from "react";
 import { GiLipstick } from 'react-icons/gi';
 import { BsFillHeartFill } from 'react-icons/bs';
 import { useNavigate } from "react-router-dom";
+import '../css/Navbar.css';
 
 const Navbar = () => {
 
     const navigate= useNavigate();
     const SignOut = () => {
-        navigate(`/Login`);
+        navigate(`/`);
     }
     const GoHome = () => {
         navigate(`/Home`);
@@ -41,7 +42,7 @@ const Navbar = () => {
                         <a onClick={SignOut} className="nav-link">Sign Out</a>
                         </li>
                     <li className="nav-item">
-                        <a onClick={Wishlist} className="nav-link"> <BsFillHeartFill/> </a>
+                        <a onClick={Wishlist} className="nav-link"> <BsFillHeartFill/></a>
                     </li>
                 </ul>
             </div>

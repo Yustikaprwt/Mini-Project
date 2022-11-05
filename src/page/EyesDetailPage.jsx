@@ -2,7 +2,6 @@ import { React, useState, useEffect} from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Loading from "../components/Loading";
-import SearchBar from "../components/Searchbar";
 import { NavLink } from "react-router-dom";
 
 const EyesDetailPage = () => {
@@ -39,7 +38,7 @@ const EyesDetailPage = () => {
             const ShowProducts = () => {
                 return ( 
                     <>
-                    <div className="button d-flex justify-content-center mb-5 pb-5">
+                    <div className="button d-flex justify-content-center p-2" style={{marginTop: "70px"}}>
                         <button onClick={() => 
                             setFilter(data)} className="btn btn-outline-secondary btn-sm">All
                         </button>
@@ -59,8 +58,10 @@ const EyesDetailPage = () => {
                             filterProduct("smashbox")} className="btn btn-outline-secondary btn-sm">smashbox
                         </button>
                         <button onClick={() => 
-                            filterProduct("maybelline")} className="btn btn-outline-secondary btn-sm">maybelline</button>
+                            filterProduct("maybelline")} className="btn btn-outline-secondary btn-sm">maybelline
+                        </button>
                     </div>
+                <hr/>
 
                     <div className="row" style={{display: "flex", flexDirection: "row"}}>
                         {filter.map((product) => (
@@ -74,7 +75,6 @@ const EyesDetailPage = () => {
                                             <h4 className="card-text" style={{color: "#5A5D60"}}>{product.name}</h4>
                                             <p>${product.price}</p>
                                             <NavLink to={`/Detail/Eyes/Product/${product.id}`} className="btn btn-primary" style={{marginBottom: "20px"}}>Check Detail</NavLink>
-                                            <a href="#" className="btn btn-danger" style={{marginBottom: "20px"}}>Delete Product</a>
                                         </div>
                                     </div>
                                 </div>
@@ -88,8 +88,6 @@ const EyesDetailPage = () => {
     return (
         <>
         <Navbar/>
-            <SearchBar/>
-            <hr/>
                 <div className="loading">
                     {loading ? <Loading/> : <ShowProducts/>}
                 </div>

@@ -25,7 +25,7 @@ const Card = () => {
         <div style={{display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center", marginTop: 170}}>
 
             <div className="card" style={{width: "16rem"}}>
-                <div className="card-image">
+                <div className="card-image" id="zoom-in">
                     <img src={lips} alt="lips option"/>
                 </div>
             <div className="card-title">

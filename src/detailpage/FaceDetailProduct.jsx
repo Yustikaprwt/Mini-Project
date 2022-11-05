@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Loading from "../components/Loading";
 import { useParams, useNavigate } from "react-router-dom";
+import { useAppContext } from "../components/appContext";
 import axios from "axios";
 
 const FaceDetailProduct = () => {
@@ -15,6 +16,14 @@ const FaceDetailProduct = () => {
   const { id } = useParams();
   const [product, setProduct] = useState([]);
   const [loading, setLoading] = useState(false);
+
+  const {favorites,addToFavorites,removeFromFavorites} = useAppContext();
+    console.log("favorite are", favorites);
+
+    const favoritesCheker = (id) => {
+        const boolean = favorites.some((product) => product.id === id);
+        return boolean;
+    }
 
   useEffect(() => {
         const fetchData = async () => {
@@ -56,12 +65,19 @@ const FaceDetailProduct = () => {
                         <h5>Brand: {product.brand} </h5>
                         <h5>Category: {product.category} </h5>
                         <p className="lead">$ {product.price} </p>
-                        <a className="lead"> {product.product_link} </a>
+                        <a href={product.product_link} className="lead" style={{textDecoration: "none"}}> {product.product_link} </a>
                         <p className="lead"> {product.description} </p>
+
+                        {favoritesCheker(product.id) ?
+                        <button onClick={()=> removeFromFavorites(product.id)} className="btn btn-warning" style={{marginBottom: "20px"}}>Remove from Wishlist</button>
+                        : <button onClick={()=> addToFavorites(product)} className="btn btn-warning" style={{marginBottom: "20px"}}>Add To Wishlist</button>}
+
+                        <br/>
+
                         <button onClick={FaceDetailPage} className="btn btn-secondary" style={{
-                            width: "120px"}}>
-                                Back
-                        </button>
+                        width: "135px", marginBottom: "120px"}}>
+                            Back
+                    </button>
                     </div>
                 </>
             );
