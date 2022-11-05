@@ -7,6 +7,7 @@ import LipsDetailProduct from './detailpage/LipsDetailProduct';
 import FaceDetailProduct from './detailpage/FaceDetailProduct';
 import CheckDetailProduct from './detailpage/CheeksDetailProduct';
 import EyesDetailProduct from './detailpage/EyesDetailProduct';
+import Cart from './page/Cart';
 import Wishlist from './page/Wishlist';
 
 import LipsDetailPage from './page/LipsDetailPage';
@@ -31,6 +32,7 @@ function App() {
       <Route path='/Detail/Cheeks/Product/:id' exact element={<CheckDetailProduct />} />
       <Route path='Detail/Eyes/Product/:id' exact element={<EyesDetailProduct />} />
       <Route path='/Wishlist' exact element={<Wishlist />} />
+      <Route path='/Cart' exact element={<Cart />} />
     </Routes>
     </>
   );

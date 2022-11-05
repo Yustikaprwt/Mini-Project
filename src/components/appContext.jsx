@@ -30,8 +30,23 @@ const AppContextProvider = ({children}) => {
         setFavorites(newFavorites);
     }
 
+    const [cart, setCart] = useState([]);
+
+    const addToCart = (data) => {
+        const oldCart = [...cart];
+
+        const newCart = oldCart.concat(data);
+        setCart(newCart);
+    }
+
+    const removeFromCart = (id) => {
+        const oldCart = [...cart];
+        const newCart = oldCart.filter((data)=>data.id !== id);
+        setCart(newCart);
+    }
+
     return(
-        <AppContext.Provider value={{favorites,addToFavorites,removeFromFavorites}}>
+        <AppContext.Provider value={{favorites,cart,addToFavorites,removeFromFavorites,addToCart,removeFromCart}}>
             {children}
         </AppContext.Provider>
     )

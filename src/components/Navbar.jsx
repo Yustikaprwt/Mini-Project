@@ -1,5 +1,6 @@
 import React from "react";
 import { GiLipstick } from 'react-icons/gi';
+import { FaShoppingCart } from 'react-icons/fa';
 import { BsFillHeartFill } from 'react-icons/bs';
 import { useNavigate } from "react-router-dom";
 import '../css/Navbar.css';
@@ -15,6 +16,9 @@ const Navbar = () => {
     }
     const Wishlist = () => {
         navigate(`/Wishlist`);
+    }
+    const Cart = () => {
+        navigate(`/Cart`);
     }
 
     return(
@@ -43,6 +47,9 @@ const Navbar = () => {
                         </li>
                     <li className="nav-item">
                         <a onClick={Wishlist} className="nav-link"> <BsFillHeartFill/></a>
+                    </li>
+                    <li className="nav-item">
+                        <a onClick={Cart} className="nav-link"> <FaShoppingCart/></a>
                     </li>
                 </ul>
             </div>
