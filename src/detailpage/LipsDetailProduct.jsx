@@ -2,7 +2,7 @@ import { React, useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Loading from "../components/Loading";
-import { ToastContainer, toast } from 'react-toastify';
+import { BsBookmarkHeart, BsFillBookmarkHeartFill } from "react-icons/bs"
 import { useParams, useNavigate} from "react-router-dom";
 import { useAppContext } from "../components/appContext";
 import axios from "axios";
@@ -13,8 +13,6 @@ const DetailProduct = () => {
     const LipsDetailPage = () => {
         navigate(`/Lips/Detail`);
     }
-
-    const notify = () => toast("Wow so easy!");
 
     const { id } = useParams();
     const [product, setProduct] = useState([]);
@@ -75,8 +73,8 @@ const DetailProduct = () => {
                     <p className="lead"> {product.description} </p>
                     
                     {favoritesCheker(product.id) ?
-                    <button onClick={()=> removeFromFavorites (product.id)} className="btn btn-warning" style={{marginBottom: "20px"}}>Remove from Wishlist</button>
-                    : <button onClick={()=> addToFavorites(product)} className="btn btn-warning" style={{marginBottom: "20px"}}>Add To Wishlist</button>}
+                    <button onClick={()=> removeFromFavorites (product.id)} className="btn btn-warning" style={{marginBottom: "20px"}}>Remove from Wishlist <BsFillBookmarkHeartFill/> </button>
+                    : <button onClick={()=> addToFavorites(product)} className="btn btn-warning" style={{marginBottom: "20px"}}>Add To Wishlist <BsBookmarkHeart/> </button>}
 
                     <br/>
                     

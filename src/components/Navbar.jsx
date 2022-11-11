@@ -1,6 +1,6 @@
 import React from "react";
 import { GiLipstick } from 'react-icons/gi';
-import { FaShoppingCart } from 'react-icons/fa';
+import { BsStars } from "react-icons/bs";
 import { BsFillHeartFill } from 'react-icons/bs';
 import { useNavigate } from "react-router-dom";
 import '../css/Navbar.css';
@@ -17,8 +17,8 @@ const Navbar = () => {
     const Wishlist = () => {
         navigate(`/Wishlist`);
     }
-    const Cart = () => {
-        navigate(`/Cart`);
+    const Recommendation = () => {
+        navigate(`/Recommendation`);
     }
 
     return(
@@ -39,7 +39,7 @@ const Navbar = () => {
 
             <div className="collapse navbar-collapse" id="navbarExample01">
                 <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li className="nav-item active">
+                    <li className="nav-item">
                         <a onClick={GoHome} className="nav-link">Home</a>
                         </li>
                     <li className="nav-item">
@@ -49,7 +49,7 @@ const Navbar = () => {
                         <a onClick={Wishlist} className="nav-link"> <BsFillHeartFill/></a>
                     </li>
                     <li className="nav-item">
-                        <a onClick={Cart} className="nav-link"> <FaShoppingCart/></a>
+                        <a onClick={Recommendation} className="nav-link"> <BsStars/></a>
                     </li>
                 </ul>
             </div>

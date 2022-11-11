@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Loading from "../components/Loading";
 import { NavLink} from "react-router-dom";
+import { GiPriceTag } from 'react-icons/gi'
 import "../css/LipsDetailPage.css";
 
 const LipsDetailPage = () => {
@@ -83,10 +84,10 @@ const LipsDetailPage = () => {
                                     <img src={product.api_featured_image} className="card-img-top" alt={product.title}/>
                                     <p style={{color: "black"}}>{product.id}</p>
                                     <div className="card-body">
-                                        <div className="card-title mb-0 lead fw-bold">
+                                        <div className="card-title mb-0 lead">
                                             <h5 style={{color: "black"}}>{product.brand}</h5>
-                                            <h4 className="card-text" style={{color: "#5A5D60"}}>{product.name}</h4>
-                                            <p>${product.price}</p>
+                                            <p className="card-text" style={{color: "#5A5D60"}}>{product.name}</p>
+                                            <p><GiPriceTag/> $ {product.price}</p>
                                             <NavLink to={`/Detail/Lips/Product/${product.id}`} className="btn btn-primary" style={{marginBottom: "20px"}}>Check Detail</NavLink>
                                         </div>
                                     </div>

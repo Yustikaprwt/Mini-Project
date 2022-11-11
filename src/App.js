@@ -7,13 +7,14 @@ import LipsDetailProduct from './detailpage/LipsDetailProduct';
 import FaceDetailProduct from './detailpage/FaceDetailProduct';
 import CheckDetailProduct from './detailpage/CheeksDetailProduct';
 import EyesDetailProduct from './detailpage/EyesDetailProduct';
-import Cart from './page/Cart';
+import Recommendation from './page/Recommendation';
 import Wishlist from './page/Wishlist';
 
 import LipsDetailPage from './page/LipsDetailPage';
 import FaceDetailPage from './page/FaceDetailPage';
 import CheeksDetailPage from './page/CheeksDetailPage';
 import EyesDetailPage from './page/EyesDetailPage';
+import RecommendationDetailProduct from './detailpage/Recommendation';
 
 function App() {
 
@@ -32,7 +33,8 @@ function App() {
       <Route path='/Detail/Cheeks/Product/:id' exact element={<CheckDetailProduct />} />
       <Route path='Detail/Eyes/Product/:id' exact element={<EyesDetailProduct />} />
       <Route path='/Wishlist' exact element={<Wishlist />} />
-      <Route path='/Cart' exact element={<Cart />} />
+      <Route path='/Recommendation' exact element={<Recommendation />} />
+      <Route path='/Detail/Recommendation/:id' exact element={<RecommendationDetailProduct/>} />
     </Routes>
     </>
   );

@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate} from "react-router-dom";
+import '../css/Footer.css';
 
 const Footer = () => {
 
@@ -9,7 +10,7 @@ const Footer = () => {
     }
 
     return (
-        <footer onClick={AboutUs}><strong>ABOUT US</strong></footer>
+        <footer className="aboutUs" onClick={AboutUs}><strong>ABOUT US</strong></footer>
     )
 }
 

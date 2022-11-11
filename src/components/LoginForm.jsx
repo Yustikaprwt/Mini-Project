@@ -1,20 +1,14 @@
 import { React, useState } from "react";
 import cover from "../asset/Cover.jpg";
-import { useNavigate } from "react-router-dom";
 import { Button } from "react-bootstrap";
 
-const LoginForm = ({login, error}) => {
+const LoginForm = ({login}) => {
     const [details, setDetails] = useState({name:"", email: "", password: ""});
 
     const submitHandler = e => {
         e.preventDefault();
 
         login(details);
-    }
-
-    const navigate= useNavigate();
-    const GoHome = () => {
-        navigate(`/Home`);
     }
 
     return(

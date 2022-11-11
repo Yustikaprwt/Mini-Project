@@ -1,0 +1,23 @@
+.home :hover {
+    transform: scale(1.2);
+    z-index: 2;
+    cursor: pointer;
+}	
+
+.home-image {
+    border-radius: 10px;
+    box-shadow: 0 0 8px #889390;
+}
+
+.home-title {
+    font-size: 25px;
+    color:  #F47181;
+    margin-top: 12px;
+    text-shadow:0 0 2px gold;
+}
+
+.home-card{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+

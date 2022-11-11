@@ -13,13 +13,14 @@
 
 .card {
     box-shadow: 0 0 10px #889390;
-    width: 250px;
+    width: 150px;
     border-radius: 10px;
     margin: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .card-image img{
@@ -33,13 +34,8 @@
     align-content: center;
 }
 
-.card-image :hover {
-    transform: scale(1.2);
-    cursor: pointer;
-}
-
 .card-body {
-    font-size: 25px;
+    font-size: 15px;
     color: #F47181;
     display: flex;
     justify-content: center;

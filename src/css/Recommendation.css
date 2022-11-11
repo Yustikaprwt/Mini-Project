@@ -1,0 +1,13 @@
+.recommendation-title{
+    font-family: 'PT Serif', serif;
+    margin-top: 20px;
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    color:#F47181 ; 
+    text-shadow:0 2px gold;
+}
+
+.carousel-title {
+    color: whitesmoke;
+}
