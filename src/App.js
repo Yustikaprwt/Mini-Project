@@ -2,6 +2,7 @@ import {Route, Routes} from 'react-router-dom';
 import LoginPage from './page/LoginPage';
 import HomePage from './page/HomePage';
 import AboutUs from './page/AboutUs';
+import { Helmet } from 'react-helmet';
 
 import LipsDetailProduct from './detailpage/LipsDetailProduct';
 import FaceDetailProduct from './detailpage/FaceDetailProduct';
@@ -20,6 +21,11 @@ function App() {
 
   return (
     <>
+    <Helmet>
+      <meta charSet="utf-8" />
+      <title>Beautyou</title>
+      <link rel="canonical" href="http://mysite.com/example" />
+    </Helmet>
     <Routes>
       <Route path='/' element={<LoginPage />}/>
       <Route path='/Home' element={<HomePage />} />
